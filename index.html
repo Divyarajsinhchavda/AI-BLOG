@@ -20,18 +20,63 @@
             color: #fff;
         }
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #6a0dad;
-            padding: 15px 30px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #6a0dad;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    display: flex;
+    gap: 20px; /* Add spacing between menu items */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Add spacing between icons */
+}
+
+.social-icons img {
+    width: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #6a0dad;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .social-icons {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+    }
+}
+
         .logo {
             font-size: 28px;
             font-weight: 700;
@@ -131,36 +176,7 @@
             background: #222;
             color: white;
         }
-        @media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background: #6a0dad;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center; /* Center text */
-    }
-    .menu.active {
-        display: flex;
-    }
-    .menu a {
-        display: block;
-        padding: 10px;
-        color: white;
-        font-size: 18px;
-        font-weight: 600;
-        text-decoration: none;
-    }
-    .menu a:hover {
-        background: #5a0cae;
-        border-radius: 5px;
-    }
-}
-
+        
         @media (max-width: 768px) {
             .menu { display: none; }
             .menu-toggle { display: block; }
