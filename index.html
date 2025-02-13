@@ -37,6 +37,33 @@
             font-weight: 700;
             color: white;
         }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #ffd700;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+        .social-icons img {
+            width: 24px;
+            transition: transform 0.3s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
         .dark-mode-toggle {
             background: white;
             border: none;
@@ -50,9 +77,18 @@
             background: #333;
             color: white;
         }
+        header {
+            background: #222;
+            color: white;
+            padding: 62px 16px 50px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 73px;
+        }
         .container {
             max-width: 900px;
-            margin: 100px auto;
+            margin: 30px auto;
             background: white;
             padding: 25px;
             border-radius: 10px;
@@ -64,45 +100,96 @@
             color: white;
         }
         .contact {
-            text-align: center;
-            margin-top: 20px;
+            max-width: 800px;
+            margin: 40px auto;
             padding: 20px;
-            background: #f4f4f4;
-            border-radius: 8px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .contact:hover {
+            transform: scale(1.05);
         }
         .dark-mode .contact {
             background: #444;
+            color: white;
+        }
+        .contact a {
+            text-decoration: none;
+            color: #6a0dad;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #ffd700;
         }
         footer {
             text-align: center;
             padding: 15px;
             background: #222;
             color: white;
-            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .menu { display: none; }
+            .menu-toggle { display: block; }
         }
     </style>
 </head>
 <body>
     <div class="navbar">
         <div class="logo">TecDivyaraj</div>
-        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
+        <div class="menu">
+            <a href="#what-is-ai">What is AI?</a>
+            <a href="#types-of-ai">Types of AI</a>
+            <a href="#how-ai-works">How AI Works</a>
+            <a href="#applications-of-ai">Applications</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/chavda-divyarajsinh2007/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/divyarajsinh_chavda_haliyad/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
+
+    <header>Understanding Artificial Intelligence</header>
+
     <div class="container">
-        <h2>Understanding Artificial Intelligence</h2>
+        <h2 id="what-is-ai">What is AI?</h2>
         <p>Artificial Intelligence (AI) refers to the ability of machines to mimic human intelligence...</p>
-        <section class="contact">
-            <h3>Contact Me</h3>
-            <p>Email: <a href="mailto:chavdadivyaraj07@gmail.com">chavdadivyaraj07@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919512526152">+91 9512526152</a></p>
-        </section>
+        <h2 id="types-of-ai">Types of AI</h2>
+        <p><b>Narrow AI</b>: AI designed for specific tasks, like Google Search or virtual assistants...</p>
+        <h2 id="how-ai-works">How AI Works</h2>
+        <p>AI works through algorithms, machine learning, and deep learning to analyze data...</p>
+        <h2 id="applications-of-ai">Applications of AI</h2>
+        <p>AI is used in <b>healthcare</b>, <b>voice assistants</b>, <b>self-driving cars</b>, <b>social media</b>...</p>
     </div>
+
+    <section class="contact" id="contact">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:chavdadivyaraj07@gmail.com">chavdadivyaraj07@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919512526152">+91 9512526152</a></p>
+    </section>
+
     <footer>
-        <p>&copy; 2025 AI Blog | Designed by Divyarajsinh Chavda</p>
+        &copy; 2025 AI Blog | Created by Divyarajsinh Chavda
     </footer>
+
     <script>
-        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+        function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
-        });
+        }
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
     </script>
 </body>
 </html>
