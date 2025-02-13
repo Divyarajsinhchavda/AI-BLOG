@@ -3,157 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Basics Blog</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="author" content="Divyarajsinh Chavda">
+    <meta name="description" content="AI Blog - Stay updated with the latest trends in Artificial Intelligence, Machine Learning, and Deep Learning.">
+    <meta name="keywords" content="AI, Artificial Intelligence, Machine Learning, Deep Learning, AI Blog">
+    <title>AI Blog | Latest AI Trends</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #eef1f7;
-            color: #333;
-            transition: background 0.3s, color 0.3s;
-        }
-        .dark-mode {
-            background-color: #1e1e1e;
-            color: #fff;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #6a0dad;
-            padding: 15px 30px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: white;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .navbar a:hover {
-            color: #ffd700;
-        }
-        .menu {
-            display: flex;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 28px;
-            color: white;
-            cursor: pointer;
-        }
-        .social-icons img {
-            width: 24px;
-            transition: transform 0.3s;
-        }
-        .social-icons img:hover {
-            transform: scale(1.2);
-        }
-        .dark-mode-toggle {
-            background: white;
-            border: none;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .dark-mode .dark-mode-toggle {
-            background: #333;
-            color: white;
-        }
-        header {
-            background: #222;
-            color: white;
-            padding: 62px 16px 50px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-             margin-top: 73px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .dark-mode .container {
-            background: #333;
-            color: white;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #222;
-            color: white;
-        }
-        @media (max-width: 768px) {
-            .menu { display: none; }
-            .menu-toggle { display: block; }
-        }
-    </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">TecDivyaraj</div>
-        <div class="menu">
-            <a href="#what-is-ai">What is AI?</a>
-            <a href="#types-of-ai">Types of AI</a>
-            <a href="#how-ai-works">How AI Works</a>
-            <a href="#applications-of-ai">Applications</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/chavda-divyarajsinh2007/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.instagram.com/divyarajsinh_chavda_haliyad/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-        </div>
-        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    </div>
-    <header>Understanding Artificial Intelligence</header>
-    <div class="container">
-        <h2 id="what-is-ai">What is AI?</h2>
-        <p>Artificial Intelligence (AI) refers to the ability of machines to mimic human intelligence...</p>
-        <h2 id="types-of-ai">Types of AI</h2>
-        <p><b>Narrow AI</b>: AI designed for specific tasks, like Google Search or virtual assistants...</p>
-        <h2 id="how-ai-works">How AI Works</h2>
-        <p>AI works through algorithms, machine learning, and deep learning to analyze data...</p>
-        <h2 id="applications-of-ai">Applications of AI</h2>
-        <p>AI is used in <b>healthcare</b>, <b>voice assistants</b>, <b>self-driving cars</b>, <b>social media</b>...</p>
-    </div>
+    <header>
+        <nav class="navbar">
+            <h1>AI Blog</h1>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Welcome to AI Blog</h2>
+            <p>Stay updated with the latest trends in Artificial Intelligence.</p>
+        </section>
+        <section class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: <a href="mailto:chavdadivyaraj07@gmail.com">chavdadivyaraj07@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919512526152">+91 9512526152</a></p>
+        </section>
+    </main>
     <footer>
-        &copy; 2025 AI Blog | Created by Divyarajsinh Chavda
+        <p>&copy; 2025 AI Blog | Designed by Divyarajsinh Chavda</p>
     </footer>
     <script>
-        function toggleDarkMode() {
+        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
-        }
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
+        });
     </script>
 </body>
 </html>
- 
