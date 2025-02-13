@@ -35,12 +35,14 @@
 
 .menu {
     display: flex;
-    gap: 20px; /* Add spacing between menu items */
+    gap: 20px;
 }
 
 .social-icons {
     display: flex;
-    gap: 15px; /* Add spacing between icons */
+    align-items: center;
+    gap: 15px;
+    margin-left: auto; /* Fix for social icons position */
 }
 
 .social-icons img {
@@ -50,6 +52,14 @@
 
 .social-icons img:hover {
     transform: scale(1.2);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
 }
 
 @media (max-width: 768px) {
@@ -72,8 +82,12 @@
 
     .social-icons {
         position: absolute;
-        right: 10px;
-        top: 12px;
+        right: 60px;
+        top: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }
 
